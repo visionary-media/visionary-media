@@ -3,72 +3,46 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Visionary Media</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800&display=swap" rel="stylesheet">
 
 <style>
 
 body {
   margin:0;
-  font-family:'Montserrat', sans-serif;
+  font-family:'Montserrat',sans-serif;
   background:#000;
   color:#fff;
 }
 
 /* HEADER */
 header {
-  padding:20px;
+  position:fixed;
+  width:100%;
+  top:0;
+  left:0;
+  background:rgba(0,0,0,0.6);
+  padding:15px;
   text-align:center;
-  font-size:30px;
   font-weight:700;
   letter-spacing:2px;
-  background:#000;
+  z-index:1000;
 }
 
-/* HERO VIDEO */
-<section class="hero">
-  <video autoplay muted loop playsinline class="bg-video">
-    <source src="https://cdn.coverr.co/videos/coverr-modern-house-1855/1080p.mp4" type="video/mp4">
-  </video>
-
-  <div class="hero-content">
-    <h1>Content That Converts</h1>
-    <p>Real Estate | Lifestyle | Food</p>
-    <a href="#portfolio" class="btn">View Work</a>
-  </div>
-</section>
-  
-.bg-video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transform: translate(-50%, -50%);
-  z-index: -1;
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.6);
-  top: 0;
-  left: 0;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 1;
-  text-align: center;
+/* HERO */
+.hero {
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.8)),
+  url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') center/cover no-repeat;
 }
 
 .hero h1 {
-  font-size:50px;
+  font-size:55px;
   margin:0;
 }
 
@@ -78,38 +52,38 @@ header {
 }
 
 .btn {
-  padding:12px 25px;
   margin-top:20px;
+  padding:12px 25px;
   background:#e50914;
   color:#fff;
   text-decoration:none;
   border-radius:5px;
-  display:inline-block;
 }
 
-/* SECTIONS */
+/* SECTION */
 .section {
-  padding:60px 20px;
+  padding:80px 20px;
   text-align:center;
 }
 
+/* SERVICES */
 .grid {
   display:flex;
   flex-wrap:wrap;
   justify-content:center;
-  gap:20px;
+  gap:25px;
 }
 
 .card {
-  background:#111;
-  padding:25px;
-  border-radius:12px;
   width:280px;
+  padding:25px;
+  background:#111;
+  border-radius:12px;
   transition:0.3s;
 }
 
 .card:hover {
-  transform:translateY(-8px);
+  transform:translateY(-10px);
 }
 
 /* PORTFOLIO */
@@ -126,12 +100,11 @@ header {
   height:120px;
   border-radius:50%;
   object-fit:cover;
-  margin-bottom:10px;
 }
 
-/* FOOTER */
+/* CONTACT */
 footer {
-  padding:20px;
+  padding:30px;
   text-align:center;
   background:#000;
   color:#aaa;
@@ -145,8 +118,8 @@ footer {
   background:#25D366;
   padding:15px;
   border-radius:50%;
-  text-decoration:none;
   color:#fff;
+  text-decoration:none;
 }
 
 </style>
@@ -156,14 +129,10 @@ footer {
 
 <header>VISIONARY MEDIA</header>
 
-<!-- HERO VIDEO -->
+<!-- HERO -->
 <section class="hero">
-  <video autoplay muted loop playsinline class="bg-video">
-    <source src="https://cdn.coverr.co/videos/coverr-luxury-villa-5176/1080p.mp4" type="video/mp4">
-  </video>
-
-  <div class="hero-content">
-    <h1>Content That Converts</h1>
+  <div>
+    <h1>Visuals That Sell</h1>
     <p>Real Estate | Lifestyle | Food</p>
     <a href="#portfolio" class="btn">View Work</a>
   </div>
@@ -171,19 +140,19 @@ footer {
 
 <!-- SERVICES -->
 <section class="section">
-  <h2>Our Specialization</h2>
+  <h2>Our Services</h2>
   <div class="grid">
     <div class="card">
       <h3>Real Estate</h3>
-      <p>Interior, villas & property shoots that help sell faster.</p>
+      <p>Interior & villa shoots that convert buyers.</p>
     </div>
     <div class="card">
-      <h3>Garment / Lifestyle</h3>
-      <p>Premium fashion & brand visuals.</p>
+      <h3>Lifestyle / Garment</h3>
+      <p>Premium fashion & brand content.</p>
     </div>
     <div class="card">
       <h3>Food & Restaurant</h3>
-      <p>Attractive food photography.</p>
+      <p>Attractive visuals that bring customers.</p>
     </div>
   </div>
 </section>
@@ -198,48 +167,31 @@ footer {
   </div>
 </section>
 
-<!-- BLOG -->
+<!-- ABOUT -->
 <section class="section">
-  <h2>Articles & Blog</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Hotel Shoot Guide</h3>
-      <p>How to shoot luxury hotels.</p>
-    </div>
-    <div class="card">
-      <h3>Food Photography Tips</h3>
-      <p>Make food look attractive.</p>
-    </div>
-    <div class="card">
-      <h3>Marketing Strategy</h3>
-      <p>Grow using social media.</p>
-    </div>
-  </div>
+  <h2>About Us</h2>
+  <p>We create cinematic content that helps brands grow and sell more through visuals.</p>
 </section>
 
 <!-- TEAM -->
 <section class="section team">
   <h2>Our Team</h2>
   <div class="grid">
-
     <div class="card">
       <img src="https://via.placeholder.com/150">
       <h3>Ravi</h3>
       <p>Camera Operator</p>
     </div>
-
     <div class="card">
       <img src="https://via.placeholder.com/150">
       <h3>Priya</h3>
       <p>Editor</p>
     </div>
-
     <div class="card">
       <img src="https://via.placeholder.com/150">
       <h3>Nikita</h3>
       <p>Anchor</p>
     </div>
-
   </div>
 </section>
 
@@ -247,7 +199,7 @@ footer {
 <section class="section">
   <h2>Contact</h2>
   <p>Instagram: 88.views | Email: zealiconadvtandfilmproduction@gmail.com</p>
-  <a class="btn" href="https://wa.me/919370574568">Hire Now</a>
+  <a class="btn" href="https://wa.me/919370574568">Book Your Shoot</a>
 </section>
 
 <a class="whatsapp" href="https://wa.me/919370574568">💬</a>
