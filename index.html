@@ -14,20 +14,29 @@ body {
   font-family:'Montserrat',sans-serif;
   background:#000;
   color:#fff;
+  scroll-behavior:smooth;
 }
 
-/* HEADER */
-header {
+/* NAVBAR */
+nav {
   position:fixed;
-  width:100%;
   top:0;
-  left:0;
-  background:rgba(0,0,0,0.6);
-  padding:15px;
-  text-align:center;
-  font-weight:700;
-  letter-spacing:2px;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  padding:15px 30px;
+  background:rgba(0,0,0,0.7);
   z-index:1000;
+}
+
+nav h2 {
+  margin:0;
+}
+
+nav a {
+  color:#fff;
+  text-decoration:none;
+  margin-left:20px;
 }
 
 /* HERO */
@@ -42,13 +51,7 @@ header {
 }
 
 .hero h1 {
-  font-size:55px;
-  margin:0;
-}
-
-.hero p {
-  color:#ccc;
-  margin-top:10px;
+  font-size:60px;
 }
 
 .btn {
@@ -66,7 +69,7 @@ header {
   text-align:center;
 }
 
-/* SERVICES */
+/* GRID */
 .grid {
   display:flex;
   flex-wrap:wrap;
@@ -74,6 +77,7 @@ header {
   gap:25px;
 }
 
+/* CARD */
 .card {
   width:280px;
   padding:25px;
@@ -99,12 +103,21 @@ header {
   width:120px;
   height:120px;
   border-radius:50%;
-  object-fit:cover;
 }
 
-/* CONTACT */
+/* CTA */
+.cta {
+  background:#111;
+  padding:60px 20px;
+}
+
+.cta h2 {
+  font-size:32px;
+}
+
+/* FOOTER */
 footer {
-  padding:30px;
+  padding:20px;
   text-align:center;
   background:#000;
   color:#aaa;
@@ -127,39 +140,48 @@ footer {
 
 <body>
 
-<header>VISIONARY MEDIA</header>
+<!-- NAVBAR -->
+<nav>
+  <h2>VISIONARY</h2>
+  <div>
+    <a href="#">Home</a>
+    <a href="#services">Services</a>
+    <a href="#portfolio">Work</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
 
 <!-- HERO -->
 <section class="hero">
   <div>
     <h1>Visuals That Sell</h1>
-    <p>Real Estate | Lifestyle | Food</p>
-    <a href="#portfolio" class="btn">View Work</a>
+    <p>We create cinematic content for brands</p>
+    <a href="#contact" class="btn">Book Now</a>
   </div>
 </section>
 
 <!-- SERVICES -->
-<section class="section">
+<section id="services" class="section">
   <h2>Our Services</h2>
   <div class="grid">
     <div class="card">
       <h3>Real Estate</h3>
-      <p>Interior & villa shoots that convert buyers.</p>
+      <p>Villa & property shoots</p>
     </div>
     <div class="card">
-      <h3>Lifestyle / Garment</h3>
-      <p>Premium fashion & brand content.</p>
+      <h3>Lifestyle</h3>
+      <p>Fashion & brand shoots</p>
     </div>
     <div class="card">
-      <h3>Food & Restaurant</h3>
-      <p>Attractive visuals that bring customers.</p>
+      <h3>Food</h3>
+      <p>Restaurant visuals</p>
     </div>
   </div>
 </section>
 
 <!-- PORTFOLIO -->
 <section id="portfolio" class="section portfolio">
-  <h2>Portfolio</h2>
+  <h2>Our Work</h2>
   <div class="grid">
     <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511">
     <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
@@ -170,7 +192,7 @@ footer {
 <!-- ABOUT -->
 <section class="section">
   <h2>About Us</h2>
-  <p>We create cinematic content that helps brands grow and sell more through visuals.</p>
+  <p>We help brands grow using powerful visual storytelling.</p>
 </section>
 
 <!-- TEAM -->
@@ -195,11 +217,17 @@ footer {
   </div>
 </section>
 
+<!-- CTA -->
+<section class="cta">
+  <h2>Ready to grow your brand?</h2>
+  <a href="#contact" class="btn">Book Your Shoot</a>
+</section>
+
 <!-- CONTACT -->
-<section class="section">
+<section id="contact" class="section">
   <h2>Contact</h2>
-  <p>Instagram: 88.views | Email: zealiconadvtandfilmproduction@gmail.com</p>
-  <a class="btn" href="https://wa.me/919370574568">Book Your Shoot</a>
+  <p>Instagram: 88.views</p>
+  <a class="btn" href="https://wa.me/919370574568">WhatsApp Now</a>
 </section>
 
 <a class="whatsapp" href="https://wa.me/919370574568">💬</a>
